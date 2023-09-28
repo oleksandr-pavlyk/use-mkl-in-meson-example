@@ -1,0 +1,9 @@
+name: meson_build_example
+channels:
+   - conda-forge
+   - nodefaults
+dependencies:
+   - python
+   - meson
+   - mkl-devel=2023.2=ha770c72_49502
+   - ninja
