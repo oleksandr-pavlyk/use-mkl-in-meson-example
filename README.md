@@ -3,7 +3,9 @@
 ```bash
 conda env create -f environment.yaml
 conda activate meson_build_example
-PKG_CONFIG_PATH=${CONDA_PREFIX}/lib/pkgconfig:${PKG_CONFIG_PATH} meson setup build
+# apply work-around for missing openmp.pc
+cp openmp.pc $CONDA_PREFIX/lib/pkgconfig/
+meson setup build
 cd build
 meson install
 ./toy_use_mkl

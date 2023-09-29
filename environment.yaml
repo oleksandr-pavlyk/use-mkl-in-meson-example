@@ -4,6 +4,9 @@ channels:
    - nodefaults
 dependencies:
    - python
+   - pkgconfig
    - meson
    - mkl-devel=2023.2=ha770c72_49502
+   - cmake
    - ninja
+   - intel::intel-openmp
